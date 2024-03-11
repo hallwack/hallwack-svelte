@@ -5,7 +5,7 @@
 	import { links } from "./index";
 </script>
 
-<nav class="my-12 flex items-center gap-12">
+<nav class="my-8 flex items-center gap-12">
 	<ul class="flex items-center gap-4">
 		{#each links as link}
 			<li>
