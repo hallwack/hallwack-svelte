@@ -4,7 +4,10 @@
 	import ToolsCard from "@/components/custom/tools-card/tools-card.svelte";
 </script>
 
-<div in:fade class="flex flex-col gap-8 text-justify text-lg font-medium leading-relaxed">
+<div
+	in:fade
+	class="my-8 flex flex-col gap-8 text-justify text-base font-normal leading-relaxed sm:text-lg sm:font-medium"
+>
 	<h1 class="text-2xl font-bold tracking-wide">tools/stack 🔨</h1>
 
 	<p>The tools or stack for dev and productivity.</p>

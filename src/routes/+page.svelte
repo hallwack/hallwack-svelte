@@ -4,8 +4,11 @@
 	import ContactLinks from "@/components/custom/contact-links/contact-links.svelte";
 </script>
 
-<div in:fade class="flex flex-col gap-8 text-justify text-lg font-medium leading-relaxed">
-	<h1 class="text-2xl font-semibold tracking-wide">Hi, I'm Raihan Adam 👋</h1>
+<div
+	in:fade
+	class="my-8 flex flex-col gap-8 text-justify text-base font-normal leading-relaxed sm:text-lg sm:font-medium"
+>
+	<h1 class="text-2xl font-bold tracking-wide">Hi, I'm Raihan Adam 👋</h1>
 
 	<p>
 		I'm a 10th semester student majoring in Informatics Engineering at UIN Sunan Gunung Djati
