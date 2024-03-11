@@ -5,17 +5,16 @@
 	import { links } from "./index";
 </script>
 
-<nav class="my-4 flex items-center gap-12">
+<nav class="my-12 flex items-center gap-12">
 	<ul class="flex items-center gap-4">
 		{#each links as link}
 			<li>
 				<a
 					href={link.href}
 					class={cn(
-						"text-xl font-semibold text-primary/60",
+						"text-xl font-semibold text-primary/60 hover:underline hover:underline-offset-4",
 						link.href === $page.url.pathname && "text-primary"
-					)}
-        >{link.name}</a
+					)}>{link.name}</a
 				>
 			</li>
 		{/each}
