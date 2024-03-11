@@ -4,14 +4,15 @@
 	import "@fontsource-variable/plus-jakarta-sans";
 </script>
 
-<div class="container mx-auto min-h-screen max-w-4xl antialiased">
-	<Navbar />
-	<slot />
-</div>
+<body class="antialiased">
+	<div class="container mx-auto min-h-screen max-w-4xl">
+		<Navbar />
+		<slot />
+	</div>
+</body>
 
 <style>
 	:global(body) {
 		font-family: "Plus Jakarta Sans Variable", sans-serif;
 	}
 </style>
-
