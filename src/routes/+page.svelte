@@ -6,7 +6,7 @@
 
 <div
 	in:fade
-	class="my-8 flex flex-col gap-8 text-justify text-base font-normal leading-relaxed sm:text-lg sm:font-medium"
+	class="my-8 flex flex-col gap-8 text-justify text-base font-medium leading-relaxed sm:text-lg"
 >
 	<h1 class="text-2xl font-bold tracking-wide">Hi, I'm Raihan Adam 👋</h1>
 
