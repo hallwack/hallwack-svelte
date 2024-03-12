@@ -7,7 +7,7 @@
 
 <ModeWatcher />
 
-<body class="antialiased">
+<body class="antialiased scroll-smooth">
 	<div class="container mx-auto min-h-screen max-w-4xl">
 		<Navbar />
 		<slot />
