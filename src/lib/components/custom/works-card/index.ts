@@ -39,7 +39,7 @@ export const worksList = [
 	},
 	{
 		title: "Easyrent Bali",
-		desc: "Me and my team developing car rent website applications for company in Bali. We using ReactJS and NextJs to building frontend application, and ExpressJs to build the backend application.",
+		desc: "Me and my team developing car rent website applications for company in Bali",
 		href: "https://easyrentbali.com/",
 		website: "easyrentbali.com",
 		src: EasyrentBali,
