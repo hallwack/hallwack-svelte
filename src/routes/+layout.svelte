@@ -1,13 +1,21 @@
 <script>
-	import { ModeWatcher } from "mode-watcher";
 	import "@fontsource-variable/plus-jakarta-sans";
 	import "../app.pcss";
+	import { page } from "$app/stores";
+	import { ModeWatcher } from "mode-watcher";
+	import { MetaTags } from "svelte-meta-tags";
+	import extend from "just-extend";
 	import Navbar from "$lib/components/custom/navbar/navbar.svelte";
+
+	export let data;
+
+	$: metaTags = extend(true, {}, data.baseMetaTags, $page.data.pageMetaTags);
 </script>
 
 <ModeWatcher />
+<MetaTags {...metaTags} />
 
-<body class="antialiased scroll-smooth">
+<body class="scroll-smooth antialiased">
 	<div class="container mx-auto min-h-screen max-w-4xl">
 		<Navbar />
 		<slot />
