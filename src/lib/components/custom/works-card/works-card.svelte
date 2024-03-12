@@ -20,7 +20,7 @@
 	<div class="flex items-center justify-center">
 		<img {src} {alt} class="w-full rounded-lg object-cover" />
 	</div>
-	<Button {href} target="_blank" rel="noreferrer" class="gap-2 rounded-full text-base" variant="outline"
+	<Button {href} target="_blank" rel="noreferrer" class="gap-2 rounded-full sm:text-base" variant="outline"
 		>{website} <ArrowUpRight /></Button
 	>
 </div>
