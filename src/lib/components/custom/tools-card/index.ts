@@ -28,5 +28,6 @@ export const toolsList = [
 		href: "https://github.com/jesseduffield/lazygit",
 		title: "Lazygit",
 		desc: "Simple TUI for git commands"
-	}
+	},
+	{ href: "https://pop.system76.com/", title: "Pop!_OS", desc: "Operating system" }
 ];
