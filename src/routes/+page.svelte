@@ -21,10 +21,23 @@
 	</div>
 
 	<p>
+		I am highly motivated to learn new things, work diligently, and thrive in a team environment.
+		Additionally, I take responsibility for assigned tasks, possess a strong willingness to learn
+		and improve myself, and have excellent interpersonal skills, especially in new and diverse
+		environments.
+	</p>
+
+	<p>
 		Throughout my career journey, I have successfully completed various exciting web projects that
 		have had a positive impact. I believe that technology can provide innovative solutions to
 		everyday challenges, which inspires me to continuously develop my skills and knowledge in this
 		field.
+	</p>
+
+	<p>
+		I am incredibly enthusiastic about advancing my career in web development and making meaningful
+		contributions to the industry. I am ready to take on new challenges and continually enhance my
+		skills through lifelong learning.
 	</p>
 
 	<ContactLinks />
