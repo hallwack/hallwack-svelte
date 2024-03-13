@@ -4,10 +4,6 @@ export const load = () => {
 	const pageMetaTags = Object.freeze({
 		title: "tools",
 		description: "Tools that i used to creeating website and productivity.",
-		openGraph: {
-			title: "tools",
-			description: "Tools that i used to creeating website and productivity."
-		}
 	}) satisfies MetaTagsProps;
 
 	return {
