@@ -12,7 +12,7 @@ export const load = ({ url }) => {
 			title: "Raihan Adam",
 			description: "A junior web developer",
 			siteName: "Raihan Adam",
-			image: [
+			images: [
 				{
 					url: new URL(url.pathname, url.origin).href + "opengraph-image.jpg"
 				}
