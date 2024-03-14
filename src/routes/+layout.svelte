@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import "@fontsource-variable/plus-jakarta-sans";
 	import "../app.pcss";
 	import { page } from "$app/stores";
@@ -6,8 +6,9 @@
 	import { MetaTags } from "svelte-meta-tags";
 	import extend from "just-extend";
 	import Navbar from "$lib/components/custom/navbar/navbar.svelte";
+	import type { LayoutData } from "./$types";
 
-	export let data;
+	export let data: LayoutData;
 
 	$: metaTags = extend(true, {}, data.baseMetaTags, $page.data.pageMetaTags);
 </script>
