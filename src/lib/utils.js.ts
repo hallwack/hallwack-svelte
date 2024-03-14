@@ -89,3 +89,21 @@ export function formatDate(date: string) {
 	return `${fullDate} (${formattedDate})`;
 }
 
+export async function fetchBlogs() {
+	const allBlogFiles = import.meta.glob("/content/*.md");
+	const iterableBlogFiles = Object.entries(allBlogFiles);
+
+	const allBlogs = await Promise.all(
+		iterableBlogFiles.map(async ([path, resolver]) => {
+			const { metadata } = (await resolver()) as any;
+			const blogPath = `/blog/${path.split("/")[path.split("/").length - 1].split(".")[0]}`;
+
+			return {
+				meta: metadata,
+				path: blogPath
+			};
+		})
+	);
+
+	return allBlogs;
+}
