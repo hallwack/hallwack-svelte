@@ -12,15 +12,17 @@
 >
 	<h1 class="text-2xl font-bold tracking-wide">blog 📚</h1>
 
-	<ul>
+	<ul class="flex flex-col gap-4">
 		{#each data.blogs as post}
 			<li>
 				<h2>
-					<a href={post.path}>
+					<a href={post.path} class="text-md">
 						{post.meta.title}
 					</a>
 				</h2>
+        <span class="text-base text-primary/70">
 				Published {formatDate(post.meta.date)}
+        </span>
 			</li>
 		{/each}
 	</ul>
