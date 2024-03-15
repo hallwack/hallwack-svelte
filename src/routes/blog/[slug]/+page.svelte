@@ -6,13 +6,13 @@
 	const { title, Content, date } = data;
 </script>
 
-<article>
-	<hgroup class="my-8 flex flex-col gap-2">
-		<h1 class="text-5xl font-extrabold">{title}</h1>
+<article class="my-8 space-y-8">
+	<hgroup class="flex flex-col gap-4">
+		<h1 class="text-3xl font-bold">{title}</h1>
 		<span class="text-sm font-medium text-slate-600 dark:text-slate-400">{formatDate(date)}</span>
 	</hgroup>
 
-	<div class="prose prose-slate dark:prose-invert">
+	<div class="prose dark:prose-invert sm:prose-ul:font-medium sm:prose-ol:font-medium sm:prose-li:font-medium sm:prose-p:font-medium">
 		<Content />
 	</div>
 </article>
