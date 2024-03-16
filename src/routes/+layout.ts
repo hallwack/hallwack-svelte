@@ -1,6 +1,7 @@
 import type { MetaTagsProps } from "svelte-meta-tags";
+import type { LayoutLoad } from "./$types";
 
-export const load = ({ url }) => {
+export const load: LayoutLoad = ({ url }) => {
 	const baseMetaTags = Object.freeze({
 		title: "Raihan Adam",
 		titleTemplate: "%s | Raihan Adam",
