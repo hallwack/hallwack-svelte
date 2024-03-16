@@ -18,9 +18,23 @@
 		<p>{desc}</p>
 	</div>
 	<div class="flex items-center justify-center">
-		<img {src} {alt} class="w-full rounded-lg object-cover" />
+		<img
+			{src}
+			{alt}
+			loading="lazy"
+			decoding="async"
+			data-src={src}
+			class="aspect-video w-full rounded-lg object-cover"
+			width="100%"
+			height="100%"
+      fetchpriority="high"
+		/>
 	</div>
-	<Button {href} target="_blank" rel="noreferrer" class="gap-2 rounded-full sm:text-base" variant="outline"
-		>{website} <ArrowUpRight /></Button
+	<Button
+		{href}
+		target="_blank"
+		rel="noreferrer"
+		class="gap-2 rounded-full sm:text-base"
+		variant="outline">{website} <ArrowUpRight /></Button
 	>
 </div>

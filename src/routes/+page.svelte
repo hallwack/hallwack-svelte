@@ -17,7 +17,17 @@
 	</p>
 
 	<div class="flex items-center justify-center">
-		<img src={Photo} alt="Raihan Adam" class="w-72 rounded-lg object-cover" />
+		<img
+			src={Photo}
+			loading="lazy"
+			decoding="async"
+			data-src={Photo}
+			alt="Raihan Adam"
+			class="w-72 rounded-lg object-cover aspect-auto"
+      width="100%"
+      height="100%"
+      fetchpriority="high"
+		/>
 	</div>
 
 	<p>
