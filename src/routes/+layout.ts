@@ -15,7 +15,7 @@ export const load: LayoutLoad = ({ url }) => {
 			siteName: "Raihan Adam",
 			images: [
 				{
-					url: new URL(url.pathname, url.origin).href + "opengraph-image.jpg"
+					url: new URL(url.origin).href + "opengraph-image.jpg"
 				}
 			]
 		},
