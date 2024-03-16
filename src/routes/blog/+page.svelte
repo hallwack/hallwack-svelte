@@ -13,17 +13,21 @@
 	<h1 class="text-2xl font-bold tracking-wide">blog 📚</h1>
 
 	<ul class="flex flex-col gap-4">
-		{#each data.blogs as post}
-			<li>
-				<h2>
-					<a href={post.path} class="text-md">
-						{post.meta.title}
-					</a>
-				</h2>
-        <span class="text-base text-primary/70">
-				Published {formatDate(post.meta.date)}
-        </span>
-			</li>
-		{/each}
+		{#if data.blogs.length > 0}
+			{#each data.blogs as post}
+				<li>
+					<h2>
+						<a href={post.path} class="text-xl font-semibold">
+							{post.meta.title}
+						</a>
+					</h2>
+					<span class="text-sm text-primary/70">
+						Published {formatDate(post.meta.date)}
+					</span>
+				</li>
+			{/each}
+		{:else}
+			No one blogs here 😿
+		{/if}
 	</ul>
 </div>
