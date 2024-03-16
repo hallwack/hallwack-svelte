@@ -24,7 +24,7 @@
 			loading="lazy"
 			decoding="async"
 			data-src={src}
-			class="aspect-video w-full rounded-lg object-cover"
+			class="aspect-auto w-full rounded-lg object-cover"
 			width="100%"
 			height="100%"
       fetchpriority="high"
