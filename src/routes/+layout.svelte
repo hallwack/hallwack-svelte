@@ -23,9 +23,3 @@
 		<slot />
 	</div>
 </body>
-
-<style>
-	:global(body) {
-		font-family: "Plus Jakarta Sans Variable", sans-serif;
-	}
-</style>
