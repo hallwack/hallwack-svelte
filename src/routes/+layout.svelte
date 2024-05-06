@@ -1,5 +1,6 @@
 <script lang="ts">
 	import "@fontsource-variable/plus-jakarta-sans";
+	import "@fontsource/geist-mono";
 	import "../app.pcss";
 	import { page } from "$app/stores";
 	import { ModeWatcher } from "mode-watcher";
