@@ -17,9 +17,13 @@
 <ModeWatcher />
 <MetaTags {...metaTags} />
 
-<body class="scroll-smooth antialiased">
-	<div class="container mx-auto min-h-screen max-w-4xl">
-		<Navbar />
-		<slot />
-	</div>
-</body>
+{#if $page.route.id?.includes("cli")}
+	<slot />
+{:else}
+	<body class="scroll-smooth font-sans antialiased">
+		<div class="container mx-auto min-h-screen max-w-4xl">
+			<Navbar />
+			<slot />
+		</div>
+	</body>
+{/if}
