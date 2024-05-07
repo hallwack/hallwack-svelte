@@ -1,5 +1,6 @@
 <script lang="ts">
 	import "@fontsource-variable/plus-jakarta-sans";
+	import "@fontsource/geist-mono";
 	import "../app.pcss";
 	import { page } from "$app/stores";
 	import { ModeWatcher } from "mode-watcher";
@@ -16,15 +17,13 @@
 <ModeWatcher />
 <MetaTags {...metaTags} />
 
-<body class="scroll-smooth antialiased">
-	<div class="container mx-auto min-h-screen max-w-4xl">
-		<Navbar />
-		<slot />
-	</div>
-</body>
-
-<style>
-	:global(body) {
-		font-family: "Plus Jakarta Sans Variable", sans-serif;
-	}
-</style>
+{#if $page.route.id?.includes("terminal")}
+	<slot />
+{:else}
+	<body class="scroll-smooth font-sans antialiased">
+		<div class="container mx-auto min-h-screen max-w-4xl">
+			<Navbar />
+			<slot />
+		</div>
+	</body>
+{/if}
