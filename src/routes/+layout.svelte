@@ -17,7 +17,7 @@
 <ModeWatcher />
 <MetaTags {...metaTags} />
 
-{#if $page.route.id?.includes("cli")}
+{#if $page.route.id?.includes("terminal")}
 	<slot />
 {:else}
 	<body class="scroll-smooth font-sans antialiased">
