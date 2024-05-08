@@ -45,13 +45,6 @@
 		inputRef.focus();
 	};
 
-	const renderOutput = (data: { command: string; output: string }[]) => {
-		data.forEach((data) => {
-			let line = document.createElement("pre");
-			line.innerHTML = `${data.command} -- ${data.output}`;
-			content.appendChild(line);
-		});
-	};
 
 	const handleInputChange = (
 		event: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement }
