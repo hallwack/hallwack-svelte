@@ -2,6 +2,7 @@
 	import { onMount } from "svelte";
 	import { commands } from "./commands";
 	import { contactLinks } from "@/components/custom/contact-links";
+	import { stackList, toolsList } from "@/components/custom/tools-card";
 
 	let guest = "guest";
 	let inputRef: HTMLInputElement;
@@ -83,8 +84,18 @@
 						});
 					break;
 				}
+				case "tools": {
+					toolsList.forEach((data) => {
 						let line = document.createElement("pre");
-						line.innerHTML = `${data.command} -- <a href="${data.output}" class="underline underline-offset-4" target="_blank" rel="noreferrer">${data.output}</a>`;
+						line.innerHTML = `${data.title} -- ${data.desc}`;
+						content.appendChild(line);
+					});
+					break;
+				}
+				case "stacks": {
+					stackList.forEach((data) => {
+						let line = document.createElement("pre");
+						line.innerHTML = `${data.title} -- ${data.desc}`;
 						content.appendChild(line);
 					});
 					break;
