@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 	import { commands } from "./commands";
+	import { contactLinks } from "@/components/custom/contact-links";
+	import { stackList, toolsList } from "@/components/custom/tools-card";
 
 	let guest = "guest";
 	let inputRef: HTMLInputElement;
@@ -45,14 +47,6 @@
 		inputRef.focus();
 	};
 
-	const renderOutput = (data: { command: string; output: string }[]) => {
-		data.forEach((data) => {
-			let line = document.createElement("pre");
-			line.innerHTML = `${data.command} -- ${data.output}`;
-			content.appendChild(line);
-		});
-	};
-
 	const handleInputChange = (
 		event: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement }
 	) => {
@@ -61,6 +55,8 @@
 				inputCmd = inputCmd.toLowerCase();
 				cmdHistory.push(inputCmd);
 			}
+
+			cmdIndex = 0;
 			newLine(inputCmd);
 
 			switch (inputCmd) {
@@ -79,9 +75,27 @@
 					break;
 				}
 				case "contacts": {
-					commands.contacts.forEach((data) => {
+					contactLinks
+						.filter((data) => data.name !== "Github")
+						.forEach((data) => {
+							let line = document.createElement("pre");
+							line.innerHTML = `${data.name} -- <a href="${data.href}" class="underline underline-offset-4" target="_blank" rel="noreferrer">${data.href}</a>`;
+							content.appendChild(line);
+						});
+					break;
+				}
+				case "tools": {
+					toolsList.forEach((data) => {
 						let line = document.createElement("pre");
-						line.innerHTML = `${data.command} -- <a href="${data.output}" class="underline underline-offset-4" target="_blank" rel="noreferrer">${data.output}</a>`;
+						line.innerHTML = `${data.title} -- ${data.desc}`;
+						content.appendChild(line);
+					});
+					break;
+				}
+				case "stacks": {
+					stackList.forEach((data) => {
+						let line = document.createElement("pre");
+						line.innerHTML = `${data.title} -- ${data.desc}`;
 						content.appendChild(line);
 					});
 					break;
@@ -127,6 +141,22 @@
 			}
 
 			inputCmd = "";
+		}
+
+		if (event.key === "ArrowUp") {
+			inputCmd = cmdHistory[cmdHistory.length - 1 - cmdIndex];
+			if (cmdIndex < cmdHistory.length - 1) {
+				cmdIndex += 1;
+			}
+		}
+
+		if (event.key === "ArrowDown") {
+			inputCmd = cmdHistory[cmdHistory.length - cmdIndex];
+			if (cmdIndex > 0) {
+				cmdIndex -= 1;
+			} else if (cmdIndex == 0) {
+				inputCmd = "";
+			}
 		}
 	};
 </script>
