@@ -54,6 +54,8 @@
 				inputCmd = inputCmd.toLowerCase();
 				cmdHistory.push(inputCmd);
 			}
+
+			cmdIndex = 0;
 			newLine(inputCmd);
 
 			switch (inputCmd) {
@@ -120,6 +122,22 @@
 			}
 
 			inputCmd = "";
+		}
+
+		if (event.key === "ArrowUp") {
+			inputCmd = cmdHistory[cmdHistory.length - 1 - cmdIndex];
+			if (cmdIndex < cmdHistory.length - 1) {
+				cmdIndex += 1;
+			}
+		}
+
+		if (event.key === "ArrowDown") {
+			inputCmd = cmdHistory[cmdHistory.length - cmdIndex];
+			if (cmdIndex > 0) {
+				cmdIndex -= 1;
+			} else if (cmdIndex == 0) {
+				inputCmd = "";
+			}
 		}
 	};
 </script>
